@@ -1,0 +1,10 @@
+import { Meta, Markdown, Unstyled } from '@storybook/blocks'
+
+import { typography } from '../../tailwind-presets/tailwind-typography.preset.mjs'
+import { TypographyRender } from '../components/DesignTokens/TypographyRender'
+
+<Unstyled>
+  <div>
+    <div>{TypographyRender(typography)}</div>
+  </div>
+</Unstyled>

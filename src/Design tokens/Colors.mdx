@@ -1,0 +1,10 @@
+import { Meta, Markdown, Unstyled } from '@storybook/blocks'
+
+import { colors } from '../../tailwind-presets/tailwind-colors.preset.mjs'
+import { ColorRender } from 'components/DesignTokens/ColorRender'
+
+<div>
+  <h1>Colors</h1>
+
+  <Unstyled>{ColorRender(colors)}</Unstyled>
+</div>
