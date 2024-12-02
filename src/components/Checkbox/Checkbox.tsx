@@ -26,7 +26,7 @@ export const Checkbox: FC<CheckboxProps> = ({
         {label}
         {description && (
           <span className="text-detail !text-muted-foreground">
-            {descriptionasdasd}
+            {description}
           </span>
         )}
       </label>
