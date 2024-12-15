@@ -3,21 +3,6 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from 'lib/utils'
 import * as React from 'react'
 
-// export const buttonVariantsStyles = {
-//   default: 'default',
-//   destructive: 'destructive',
-//   outline: 'outline',
-//   secondary: 'secondary',
-//   ghost: 'ghost',
-//   link: 'link',
-// } as const
-// export const buttonVariantsSizes = {
-//   default: 'default',
-//   sm: 'sm',
-//   lg: 'lg',
-//   icon: 'icon',
-// } as const
-
 export const variants = {
   variant: {
     default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',

@@ -4,6 +4,7 @@
     "paths": {
       "ui/*": ["./src/components/ui/*"],
       "lib/*": ["./src/lib/*"],
+      "hooks/*": ["./src/hooks/*"],
       "components/*": ["./src/components/*"],
       "common/*": ["./src/common/*"]
     },

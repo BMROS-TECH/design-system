@@ -12,6 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       lib: resolve(__dirname, './src/lib'),
+      hooks: resolve(__dirname, './src/hooks'),
       components: resolve(__dirname, './src/components'),
       common: resolve(__dirname, './src/common'),
       ui: resolve(__dirname, './src/components/ui')

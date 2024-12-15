@@ -1,29 +1,34 @@
-import { useState } from 'react'
-
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { OutputWrapper } from 'common/components/OutputWrapper'
 import { Button } from 'components/Button/Button'
+import { useToast } from 'hooks/use-toast'
 import { variants } from 'ui/button'
 
 const meta = {
   title: 'Components/Button',
   component: Button,
-  parameters: {
-    layout: 'centered'
-  },
+  // parameters: {
+  //   layout: 'centered'
+  // },
   tags: ['autodocs'],
   render: ({ children, ...args }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [outputText, setOutputText] = useState<string>('')
-
+    const { toast } = useToast()
     return (
-      <>
-        <OutputWrapper>{outputText}</OutputWrapper>
-        <Button {...args} onClick={() => setOutputText('Click')}>
+      <div className="w-full">
+        {/* <OutputWrapper>{outputText}</OutputWrapper> */}
+        <Button
+          {...args}
+          onClick={() => {
+            toast({
+              title: 'Uh oh! Something went wrong.',
+              description: `Soy un click`
+            })
+          }}
+        >
           {children}
         </Button>
-      </>
+      </div>
     )
   },
   argTypes: {

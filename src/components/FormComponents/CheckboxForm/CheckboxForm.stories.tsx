@@ -6,6 +6,7 @@ import { Button } from 'components/Button/Button'
 import { CheckboxForm } from 'components/FormComponents/CheckboxForm/CheckboxForm'
 import { Form } from 'components/FormComponents/Form/Form'
 import { inputTypes } from 'components/Input/input.types'
+import { useToast } from 'hooks/use-toast'
 import { Path, useForm } from 'react-hook-form'
 import { string, z } from 'zod'
 
@@ -44,9 +45,9 @@ type FormValues = z.infer<typeof FormSchema>
 const meta = {
   title: 'FormComponents/CheckboxForm',
   component: CheckboxForm,
-  parameters: {
-    layout: 'centered'
-  },
+  // parameters: {
+  //   layout: 'centered'
+  // },
   tags: ['autodocs'],
   // render: ({ name, ...args }) => {
   //   const form = useForm<z.infer<typeof FormSchema>>({
@@ -109,6 +110,8 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   render: ({ name, control, ...args }) => {
+    const { toast } = useToast()
+
     const form = useForm<z.infer<typeof FormSchema>>({
       resolver: zodResolver(FormSchema),
       defaultValues: {
@@ -117,7 +120,11 @@ export const Primary: Story = {
     })
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
-      console.log('Funciona!', data)
+      console.log(data)
+      toast({
+        title: 'Output',
+        description: data
+      })
     }
 
     return (

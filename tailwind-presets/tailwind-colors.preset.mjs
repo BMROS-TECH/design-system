@@ -10,16 +10,16 @@ export const colors = {
     background: 'hsl(0 90% 95%)', // Fondo más claro del primario
     hover: 'hsl(356 85% 45%)' // Variante más oscura del primario
   },
-  // secondary_atlas: {
-  //   DEFAULT: 'hsl(0 0% 95%)', // Gris claro para elementos secundarios
-  //   foreground: 'hsl(0 0% 20%)', // Texto más oscuro para contraste
-  // },
+  secondary: {
+    DEFAULT: 'hsl(0 0% 95%)', // Gris claro para elementos secundarios
+    foreground: 'hsl(0 0% 20%)', // Texto más oscuro para contraste
+  },
   muted: {
     DEFAULT: 'hsl(0, 0%, 91%)', // Color apagado para fondos suaves
     foreground: 'hsl(0 0% 40%)' // Texto suave para elementos muted
   },
   accent: {
-    DEFAULT: 'hsl(190 80% 80%)', // Azul claro para destacar
+    DEFAULT: 'hsl(0, 0%, 91%)', // Azul claro para destacar
     foreground: 'hsl(0 0% 15%)' // Texto oscuro para contraste
   },
   destructive: {
@@ -36,8 +36,8 @@ export const colors = {
     foreground: 'hsl(0 0% 10%)' // Texto negro para legibilidad
   },
   congrats: {
-    DEFAULT: 'hsl(142, 55%, 75%)', // Verde accesible para felicitaciones
-    background: 'hsl(141 80% 90%)' // Fondo verde claro
+    DEFAULT: 'hsl(143 64% 24%)', // Verde accesible para felicitaciones
+    background: 'hsl(141 84% 93%)' // Fondo verde claro
   },
   info: {
     background: 'hsl(204 94% 94%)', // Fondo azul claro para información
