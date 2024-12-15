@@ -21,8 +21,8 @@ const meta = {
           {...args}
           onClick={() => {
             toast({
-              title: 'Uh oh! Something went wrong.',
-              description: `Soy un click`
+              title: 'Im a message',
+              description: `Executed by a click`
             })
           }}
         >

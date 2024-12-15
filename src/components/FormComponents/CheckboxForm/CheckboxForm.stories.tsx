@@ -123,7 +123,7 @@ export const Primary: Story = {
       console.log(data)
       toast({
         title: 'Output',
-        description: data
+        description: JSON.stringify(data)
       })
     }
 
